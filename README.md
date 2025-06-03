@@ -34,4 +34,5 @@ Se agregaron nuevas implementaciones para proteger las APIs de forma más robust
   pip install flask fastapi uvicorn pyjwt
 
 ## Autor
-Jorge Andres Jaime
+Jorge Andrés Jaime
+Estudiante de Tecnicatura Universitaria en Ciberseguridad - UGR
