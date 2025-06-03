@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-IP_PERMITIDA = "192.168.0.162"  # IP de tu PC
+IP_PERMITIDA = "192.168.0.162"  # IP de mi PC
 
 @app.route("/api/ip_protegida", methods=["GET"])
 def ruta_ip_protegida():
