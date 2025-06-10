@@ -1,37 +1,59 @@
-# API Segura - Entrega 1 y 2
+# API Segura - Entrega Final
 
-Este repositorio contiene los archivos utilizados para las entregas del Trabajo Práctico Final de la materia **Desarrollo de Software Seguro**.
+Este proyecto demuestra una API REST desarrollada con **FastAPI**, incorporando múltiples métodos de autenticación. La documentación completa se genera automáticamente con **Swagger UI**.
 
----
+## 🔐 Métodos de Autenticación Implementados
 
-## 📌 Entrega 1 - Autenticación Básica
+| Método    | Endpoint        | Descripción                                                                  |
+|-----------|-----------------|------------------------------------------------------------------------------|
+| API Key   | `/auth/apikey`  | Requiere enviar una API Key en el header `x-api-key`.                        |
+| JWT       | `/auth/jwt`     | Requiere un token JWT válido en el header `Authorization`.                   |
+| Por IP    | `/auth/ip`      | Solo permite el acceso desde una IP específica.                              |
+| Básica    | `/auth/basica`  | Simulación de autenticación básica con usuario y contraseña en la URL.       |
+| OAuth 2.0 | `/auth/token`   | Simula el flujo de autorización generando un JWT válido.                     |
 
-Se implementaron dos APIs simples con autenticación básica:
+## 🚀 Cómo ejecutar el proyecto
 
-- **basic_auth_flask.py** → API en Flask protegida con usuario y contraseña.
-- **basic_auth_fastapi.py** → API en FastAPI protegida con usuario y contraseña.
+### 1. Cloná el repositorio:
 
-Ambas están documentadas con Swagger UI a través de OpenAPI, permitiendo su prueba desde el navegador.
+```bash
+git clone https://github.com/jorgeajaime/api-segura-entrega1.git
+cd api-segura-entrega1/Codigo
+```
 
----
+### 2. Instalá las dependencias necesarias:
 
-## 📌 Entrega 2 - Autenticación Avanzada y Control de Acceso
+```bash
+pip install fastapi uvicorn python-jose
+```
 
-Se agregaron nuevas implementaciones para proteger las APIs de forma más robusta:
+### 3. Ejecutá el servidor:
 
-- **ip_auth_flask.py** → Control de acceso por IP en Flask.
-- **ip_auth_fastapi.py** → Control de acceso por IP en FastAPI.
-- **jwt_auth_flask.py** → Autenticación con JWT (token firmado) en Flask.
-- **swagger_jwt_flask.py** → JWT integrado con Swagger UI para pruebas desde el navegador.
+```bash
+uvicorn apiunificada:app --reload
+```
 
----
+### 4. Accedé a la documentación interactiva:
 
-## 🔒 Requisitos
+[http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
 
-- Python 3.8 o superior
-- Instalar dependencias con:
-  ```bash
-  pip install flask fastapi uvicorn pyjwt
+## 📂 Estructura del proyecto
+
+```
+/Codigo
+├── apiunificada.py         # API con todos los métodos de autenticación
+├── OAuth.py                # Flujo simulado de OAuth
+├── swagger_jwt_flask.py    # Implementación JWT con Flask
+├── README.md               # Este archivo
+```
+
+## ✅ Datos de prueba
+
+- **API Key**: `123456`
+- **Credenciales OAuth**:
+  - client_id: `cliente1`
+  - client_secret: `secreto1`
+
 
 ## Autor
 Jorge Andrés Jaime
