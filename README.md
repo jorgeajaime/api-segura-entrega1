@@ -30,8 +30,32 @@ pip install fastapi uvicorn python-jose
 ### 3. Ejecutá el servidor:
 
 ```bash
-uvicorn apiunificada:app --reload
+uvicorn api_unificada:app --reload
 ```
+
+``` 
+
+---
+
+**Archivo: requirements.txt**
+
+```text
+fastapi
+uvicorn
+python-jose
+```
+
+---
+
+**Archivo: .gitignore**
+
+```gitignore
+venv/
+__pycache__/
+*.pyc
+.env
+.DS_Store
+
 
 ### 4. Accedé a la documentación interactiva:
 
