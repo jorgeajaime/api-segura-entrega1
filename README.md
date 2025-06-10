@@ -7,10 +7,10 @@ Este proyecto demuestra una API REST desarrollada con **FastAPI**, incorporando 
 | Método    | Endpoint        | Descripción                                                                  |
 |-----------|-----------------|------------------------------------------------------------------------------|
 | API Key   | `/auth/apikey`  | Requiere enviar una API Key en el header `x-api-key`.                        |
-| JWT       | `/auth/jwt`     | Requiere un token JWT válido en el header `Authorization`.                   |
+| JWT       | `/auth/jwt`     | Requiere un token JWT válido en el header `Authorization`.                  |
 | Por IP    | `/auth/ip`      | Solo permite el acceso desde una IP específica.                              |
-| Básica    | `/auth/basica`  | Simulación de autenticación básica con usuario y contraseña en la URL.       |
-| OAuth 2.0 | `/auth/token`   | Simula el flujo de autorización generando un JWT válido.                     |
+| Básica    | `/auth/basica`  | Simulación de autenticación básica con usuario y contraseña en la URL.      |
+| OAuth 2.0 | `/auth/token`   | Simula el flujo de autorización generando un JWT válido.                    |
 
 ## 🚀 Cómo ejecutar el proyecto
 
@@ -33,30 +33,6 @@ pip install fastapi uvicorn python-jose
 uvicorn api_unificada:app --reload
 ```
 
-``` 
-
----
-
-**Archivo: requirements.txt**
-
-```text
-fastapi
-uvicorn
-python-jose
-```
-
----
-
-**Archivo: .gitignore**
-
-```gitignore
-venv/
-__pycache__/
-*.pyc
-.env
-.DS_Store
-
-
 ### 4. Accedé a la documentación interactiva:
 
 [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
@@ -65,10 +41,10 @@ __pycache__/
 
 ```
 /Codigo
-├── apiunificada.py         # API con todos los métodos de autenticación
-├── OAuth.py                # Flujo simulado de OAuth
-├── swagger_jwt_flask.py    # Implementación JWT con Flask
-├── README.md               # Este archivo
+├── api_unificada.py       # API con todos los métodos de autenticación
+├── OAuth_simulado.py      # Flujo simulado de OAuth
+├── JWTFlask.py            # Implementación JWT con Flask
+├── README.md              # Este archivo
 ```
 
 ## ✅ Datos de prueba
@@ -77,6 +53,7 @@ __pycache__/
 - **Credenciales OAuth**:
   - client_id: `cliente1`
   - client_secret: `secreto1`
+
 
 
 ## Autor
